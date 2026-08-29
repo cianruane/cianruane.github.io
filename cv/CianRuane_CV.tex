@@ -1,0 +1,181 @@
+%----------------------------------------------------------------------------------------
+%  Cian Ruane — Curriculum Vitae
+%  Compiles with plain pdflatex (no special fonts needed). Also fine on Overleaf.
+%----------------------------------------------------------------------------------------
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}                 % Bitstream Charter — clear, classic, prints well
+\usepackage[a4paper,top=1.9cm,bottom=1.9cm,left=2.1cm,right=2.1cm]{geometry}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Cian Ruane — CV},pdfauthor={Cian Ruane},colorlinks=true,urlcolor=accent,linkcolor=accent}
+\newcommand{\titlelink}[2]{{\hypersetup{urlcolor=black}\href{#1}{#2}}}
+
+\definecolor{accent}{HTML}{1F4D3F}   % deep green, matches cianruane.com
+\definecolor{grey}{HTML}{6B6B6B}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+\raggedbottom
+
+% ---- Section headings: small caps with a thin rule ----
+\titleformat{\section}{\color{accent}\large\scshape}{}{0pt}{}[{\color{accent!40}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+\let\oldsection\section
+\renewcommand{\section}{\Needspace*{5\baselineskip}\oldsection}
+
+% ---- Dated entries: year in a fixed left column, text hangs beside it ----
+\newlength{\yearw}\setlength{\yearw}{2.35cm}
+\newcommand{\entry}[2]{%
+  \par\noindent
+  \begin{minipage}[t]{\yearw}\strut\color{grey}\small #1\end{minipage}%
+  \hspace{0.25cm}%
+  \begin{minipage}[t]{\dimexpr\textwidth-\yearw-0.25cm\relax}\strut #2\end{minipage}%
+  \par\vspace{4pt}}
+
+% ---- Papers: title, then details beneath ----
+\newcommand{\paper}[3]{\par\noindent\begin{minipage}[t]{\textwidth}\textbf{#2}, #3\end{minipage}\par\vspace{6pt}}
+\newcommand{\journal}[1]{\textbf{\textcolor{accent}{#1}}}
+\newcommand{\lbl}[1]{\textcolor{grey}{#1}}
+
+% ---- Footer ----
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\small\color{grey}Cian Ruane — CV}
+\fancyfoot[R]{\small\color{grey}\thepage\ / \pageref{LastPage}}
+\fancyfoot[C]{\small\color{grey}Updated \today}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%  HEADER
+%----------------------------------------------------------------------------------------
+{\Huge\scshape Cian Ruane}\par\vspace{5pt}
+{\color{grey}Economist (Manager), Irish Economic Analysis Division, Economics Department, Central Bank of Ireland\par
+Research Affiliate, UCL Stone Centre for Inequality}\par\vspace{7pt}
+\href{mailto:cianruane2@gmail.com}{cianruane2@gmail.com} \quad$\cdot$\quad
+\href{https://www.cianruane.com}{cianruane.com} \quad$\cdot$\quad
+\href{https://scholar.google.com/citations?user=1qoMaBkAAAAJ}{Google Scholar} \quad$\cdot$\quad
+\href{https://www.linkedin.com/in/cian-ruane-a4b4a42b}{LinkedIn}
+\par\vspace{2pt}
+
+%----------------------------------------------------------------------------------------
+\section*{Employment}
+\entry{2023 -- present}{Economist (Manager), Irish Economic Analysis Division, Central Bank of Ireland}
+\entry{2021 -- 2023}{Economist, Research Department (Development Macroeconomics Division), International Monetary Fund}
+\entry{2018 -- 2021}{Economist (Economist Program), Research Department and Asia-Pacific Department (China Division), International Monetary Fund}
+
+\section*{Affiliations}
+\entry{2022 -- present}{Research Affiliate, \href{https://www.stone-econ.org/}{UCL Stone Centre for Inequality}}
+
+\section*{Education}
+\entry{2018}{PhD in Economics, Stanford University}
+\entry{2014}{MA in Economics, Stanford University}
+\entry{2012}{BA in Mathematics \& Economics, Trinity College Dublin}
+
+%----------------------------------------------------------------------------------------
+\section*{Refereed Publications and Forthcoming Papers}
+
+\paper{Forthcoming}{\titlelink{https://www.cianruane.com/papers/IIS_PeterRuane.pdf}{Intermediate Input Substitutability}}{%
+with Alessandra Peter.\\ \journal{Econometrica}, forthcoming.\\
+\lbl{Award:} Young Economist Award, European Economic Association Congress 2019.\\
+\lbl{Media:} \href{https://www.economist.com/finance-and-economics/2022/04/30/how-would-an-energy-embargo-affect-germanys-economy}{The Economist}}
+
+\paper{2025}{\titlelink{https://academic.oup.com/restud/article/92/6/3682/7933531}{Worker Mobility in Production Networks}}{%
+with Marvin Cardoza, Francesco Grigoli and Nicola Pierri.\\ \journal{Review of Economic Studies}, 92(6), November 2025, 3682--3703.\\
+\lbl{Media:} \href{https://voxdev.org/topic/labour-markets-migration/hiring-suppliers-and-customers-dominican-republic}{VoxDev}}
+
+\paper{2024}{\titlelink{https://www.sciencedirect.com/science/article/abs/pii/S001429212400120X}{Informality and Aggregate Productivity: The Case of Mexico}}{%
+with Jorge Alvarez.\\ \journal{European Economic Review}, 167, August 2024.}
+
+\paper{2024}{\titlelink{https://onlinelibrary.wiley.com/doi/abs/10.1111/caje.12726}{China's Declining Business Dynamism}}{%
+with Diego A. Cerdeiro.\\ \journal{Canadian Journal of Economics}, 57(3), August 2024, 726--752.}
+
+\paper{2021}{\titlelink{http://www.klenow.com/misallocation-mismeasurement-paper.pdf}{Misallocation or Mismeasurement?}}{%
+with Mark Bils and Pete Klenow.\\ \journal{Journal of Monetary Economics}, 124, November 2021, 39--56.}
+
+\section*{Working Papers}
+
+\paper{2026}{\titlelink{https://www.cianruane.com/papers/PeterRuane_DistributionCosts.pdf}{Distribution Costs}}{%
+with Alessandra Peter. May 2026.\\ \journal{American Economic Journal: Macroeconomics}, revised and resubmitted.}
+
+\section*{Work in Progress}
+
+\paper{}{Purging Estimated Markups of Short-Run Bias}{with Mark Bils.}
+\paper{}{Carbon Taxes and Misallocation in Chile}{with Pete Klenow and Ernesto Pasten.}
+
+%----------------------------------------------------------------------------------------
+\section*{Reports, Policy Contributions and Other Publications}
+
+\entry{2025}{\href{https://www.centralbank.ie/docs/default-source/publications/quarterly-bulletins/quarterly-bulletin-signed-articles/on-the-fault-line-irish-economy-in-a-time-of-geoeconomic-fragmentation.pdf}{On the Fault Line? The Irish Economy in a Time of Geoeconomic Fragmentation}. Central Bank of Ireland Quarterly Bulletin Signed Article, September 2025.}
+\entry{2023}{\href{https://www.imf.org/en/Publications/TNM/Issues/2023/06/05/A-User-Manual-for-the-DIGNAD-Toolkit-531886}{A User Manual for the DIGNAD Toolkit}. IMF Technical Note and Manual, June 2023 (\href{https://climatedata.imf.org/pages/dignad}{toolkit}).}
+\entry{2022}{\href{https://www.imf.org/en/Publications/ESR/Issues/2022/08/04/2022-external-sector-report}{External Sector Impact of Disaster Shocks}. Box in IMF External Sector Report, Chapter 1, August 2022.}
+\entry{2022}{\href{https://www.imf.org/en/Publications/CR/Issues/2022/09/21/Democratic-Republic-of-Timor-Leste-Selected-Issues-523690}{Building Resilience to Natural Disasters and Climate Change: A Model Application to Timor-Leste}. Selected Issues, Timor-Leste IMF Country Report No. 308, September 2022.}
+\entry{2022}{\href{https://www.imf.org/en/Publications/CR/Issues/2022/01/26/Peoples-Republic-of-China-2021-Article-IV-Consultation-Press-Release-Staff-Report-and-512248}{China: 2021 Article IV Consultation Staff Report}. IMF Country Report No. 021, January 2022.}
+\entry{2021}{\href{https://www.imf.org/en/Publications/WP/Issues/2021/03/12/Resource-Misallocation-Among-Listed-Firms-in-China-The-Evolving-Role-of-State-Owned-50167}{Resource Misallocation Among Listed Firms in China: The Evolving Role of State-Owned Enterprises}. IMF Working Paper No. 2021/075.}
+\entry{2021}{\href{https://www.imf.org/en/Publications/CR/Issues/2021/01/13/Peoples-Republic-of-China-Selected-Issues-50007}{Chinese State-Owned Enterprises, Resource (Mis)allocation, and Productivity}. Selected Issues, China IMF Country Report No. 006, January 2021.}
+\entry{2021}{\href{https://www.imf.org/en/Publications/CR/Issues/2021/01/06/Peoples-Republic-of-China-2020-Article-IV-Consultation-Press-Release-Staff-Report-and-49992}{China: 2020 Article IV Consultation Staff Report}. IMF Country Report No. 006, January 2021.}
+\entry{2019}{\href{https://www.imf.org/en/Publications/WEO/Issues/2019/10/01/world-economic-outlook-october-2019}{Reigniting Growth in Emerging Market and Low-Income Economies: What Role for Structural Reforms?} IMF World Economic Outlook, Chapter 3, October 2019.}
+\entry{2019}{\href{https://www.imf.org/External/Pubs/FT/irb/2019/SpringSummer/index.pdf}{Is Misallocation Really Mismeasurement? When Models Meet the Micro Data}. IMF Research Perspectives, 20(1), Spring/Summer 2019.}
+
+%----------------------------------------------------------------------------------------
+\section*{Grants, Honours and Awards}
+\entry{2019}{Young Economist Award, European Economic Association Congress}
+\entry{2017 -- 2018}{B.F. Haley and E.S. Shaw Fellowship, Stanford Institute for Economic Policy Research (SIEPR)}
+\entry{2016 -- 2017}{PhD Fellowship, Stanford Institute for Innovation in Developing Countries (SEED)}
+\entry{2016}{PhD I-Award, Stanford Institute for Innovation in Developing Countries (SEED), \$10,000}
+\entry{2015}{Entrepreneurship Research Boot Camp, NBER}
+\entry{2014}{Shultz Graduate Fellowship in Economic Policy, SIEPR}
+\entry{2012 -- 2013}{Graduate Fellowship, Stanford University Department of Economics}
+\entry{2012}{Gold Medal and Bastable Prize, Trinity College Dublin; Best International Essay, Trinity College Student Economic Review}
+\entry{2008 -- 2011}{Entrance Exhibition, Louden Ryan Prize, First Class Prize ($\times 2$) and Arthur Lyster Prize, Trinity College Dublin}
+
+%----------------------------------------------------------------------------------------
+\section*{Seminars and Conference Presentations}
+\entry{2026}{World Bank Group--IE University Conference on Growth and Resilience in Connected Economies (Madrid)}
+\entry{2025}{Queen Mary University of London; CEPR Annual Meeting of the Macroeconomics and Growth Programme}
+\entry{2024}{Arizona State University; Irish Economic Association; University College Dublin}
+\entry{2023}{Dartmouth College; HEC Paris; INSEAD--Coll\`ege de France; King's College London; CEPR Annual Meeting of the Macroeconomics and Growth Programme; ASSA Annual Meeting}
+\entry{2022}{Johns Hopkins SAIS; IGC--Stanford Firms, Trade and Development Conference; 4th European Midwest Micro/Macro Conference; Virtual International Trade and Macro Seminar (VITM); Naples Workshop on Networks and Development; Irish Economic Association; Central Bank of Ireland; Southern Economic Association Annual Meeting; University of Limerick; University of Galway; Maynooth University}
+\entry{2021}{Structural Transformation and Economic Growth (STEG) Annual Conference; Irish Economic Association; Society for Economic Dynamics (SED); North East Universities Development Consortium (NEUDC)}
+\entry{2020}{NBER Summer Institute (Economic Growth); IMF Asia-Pacific Department Seminar Series; Bruegel; PEDL Young Scholars Conference}
+\entry{2019}{Society for Economic Dynamics (SED); ThReD (Theoretical Research in Development Economics); Inter-American Development Bank; George Washington University; Joint IMF--World Bank Seminar Series; European Economic Association Congress; European Investment Bank; IMF SPR External Seminar Series}
+\entry{2018}{UC Santa Barbara; Federal Reserve Bank of Dallas; INSEAD; Rotman School of Management, University of Toronto; Federal Reserve Bank of Atlanta; Workshop on Macro Development; IMF Development Macroeconomics Division; Universit\'e de Montr\'eal}
+
+\section*{Discussions}
+\entry{2025}{\textit{A Tale of Two Markups: Reconciling Supply- and Demand-Based Estimates} (Dedola, Henkel, Hottman, Kim and Reinelt), Annual ESCB Research Cluster Workshop}
+\entry{2024}{\textit{Entry, Exit and Evolution of Productivity Across Firms} (Lawless and Rehill), Irish Economic Association}
+\entry{2023}{\textit{Misallocation in Firm Production: A Nonparametric Analysis Using Procurement Lotteries} (Carrillo, Donaldson, Pomeranz and Singhal), NBER Summer Institute, Macroeconomics and Productivity (July 2023) and CEPR Macroeconomics and Growth Programme Annual Meeting joint with STEG (November 2022)}
+\entry{2021}{\textit{Unreliable Firms: Evidence from Rwanda} (Nigam and Tan), North East Universities Development Consortium}
+\entry{2020}{\textit{Measuring Cross-Country Differences in Misallocation} (Rotemberg and White), ASSA Annual Meeting}
+\entry{2019}{\textit{Good Dispersion, Bad Dispersion} (Kehrig and Vincent), IMF Annual Macro-Financial Research Conference}
+
+%----------------------------------------------------------------------------------------
+\section*{Other Professional Activities}
+\entry{2026}{Co-organiser, \href{https://cepr.org/events/return-industrial-policy-historical-lessons-and-contemporary-challenges}{The Return of Industrial Policy: Historical Lessons and Contemporary Challenges}, CEPR--UCD--Central Bank of Ireland workshop (November 2026)}
+\entry{2023 -- 2026}{Co-organiser, Central Bank of Ireland Economics Winter Workshop (annual)}
+\entry{2025}{Co-organiser, \href{https://www.centralbank.ie/events/2025/06/20/default-calendar/trade-history-workshop----uncertain-tides--the-past-and-present-of-trade-policy}{Uncertain Tides: The Past and Present of Trade Policy}, UCD--CEPR--Central Bank of Ireland Trade-History Workshop}
+\entry{2022 -- 2023}{Guest Editor, \href{https://www.imf.org/en/IRB}{IMF Research Perspectives}}
+\entry{2015 -- present}{Referee for: American Economic Review; American Economic Journal: Macroeconomics; American Economic Review: Insights; Canadian Journal of Economics; Economic Policy; Economics Letters; European Economic Review; Journal of Applied Econometrics; Journal of Development Economics; Journal of Economic Behavior and Organization; Journal of Economic Growth; Journal of Economic Theory; Journal of Economics and Business; Journal of Monetary Economics; Journal of Political Economy; Journal of Productivity Analysis; Journal of the European Economic Association; Quarterly Journal of Economics; Review of Economic Dynamics; Review of Economic Studies; Review of Economics and Statistics}
+\entry{2013 -- 2018}{Research Assistant to Prof.\ Pete Klenow, Stanford University}
+
+\section*{Teaching}
+\entry{2022}{Content Reviewer, IMF online course \href{https://www.imf.org/en/Capacity-Development/Training/ICDTC/Schedule/OL/2022/MCCX-EAOL22-216}{Macroeconomics of Climate Change: Economics of Adaptation}}
+\entry{2022}{Instructor, IMF Africa Training Institute: The Macroeconomics of Climate Change}
+\entry{2016}{Instructor, Macroeconomics Bootcamp, International Policy Studies Program, Stanford University}
+\entry{2015}{Teaching Assistant, Intermediate Macroeconomics (Prof.\ Pete Klenow), Stanford University}
+
+\section*{Other}
+\entry{Languages}{English (native), French (native)}
+\entry{Software}{Stata, MATLAB}
+
+\end{document}
