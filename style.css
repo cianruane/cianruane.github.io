@@ -83,6 +83,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .hero-contact { font-size: .92rem; color: var(--ink-soft); }
 .hero-contact p { margin-bottom: .35rem; }
+.hero-contact .profiles a { margin-right: 1.1rem; }
+.hero-contact .profiles a::before { content: "↗ "; color: var(--ink-faint); }
 .hero-actions { display: flex; gap: .8rem; margin-top: 1.6rem; flex-wrap: wrap; }
 .btn {
   display: inline-block; padding: .55rem 1.1rem; border-radius: 3px; font-size: .82rem;
@@ -120,8 +122,13 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .paper h3 a { color: inherit; background-image: linear-gradient(var(--accent), var(--accent)); background-repeat: no-repeat; background-size: 0 1.5px; background-position: 0 100%; transition: background-size .25s ease, color .2s; }
 .paper h3 a:hover { text-decoration: none; color: var(--accent); background-size: 100% 1.5px; }
 .paper .with { font-size: .9rem; color: var(--ink-soft); }
-.paper .venue { font-size: .86rem; font-weight: 600; color: var(--accent); margin-top: .15rem; }
-.paper .venue span { font-weight: 400; color: var(--ink-soft); }
+.paper .venue { font-size: .92rem; margin-top: .35rem; color: var(--ink-soft); }
+.paper .venue .j {
+  display: inline-block; font-family: var(--serif); font-size: 1.02rem; font-weight: 600; font-style: italic;
+  color: var(--accent); background: rgba(31,77,63,.07); border-left: 3px solid var(--accent);
+  padding: .05rem .55rem .05rem .5rem; margin-right: .4rem; border-radius: 0 3px 3px 0;
+}
+.paper .venue .status { font-weight: 600; color: var(--ink); }
 .paper .note { font-size: .84rem; color: var(--ink-soft); font-style: italic; margin-top: .15rem; }
 .paper .links { font-size: .82rem; margin-top: .35rem; }
 .paper .links a { margin-right: .9rem; }
