@@ -130,7 +130,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .paper .venue .status { font-weight: 600; color: var(--ink); }
 .paper .note { font-size: .84rem; color: var(--ink-soft); font-style: italic; margin-top: .15rem; }
 .paper .links { font-size: .82rem; margin-top: .35rem; }
-.paper .links a { margin-right: .9rem; }
+.paper .links a { margin-right: .9rem; white-space: nowrap; }
 .paper .links a::before { content: "↗ "; color: var(--ink-faint); }
 
 /* collapsible abstract */
@@ -150,6 +150,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .item .t { font-weight: 600; color: var(--ink); }
 .item .by { color: var(--ink-soft); }
 .item .where { display: block; font-size: .85rem; color: var(--ink-soft); margin-top: .1rem; }
+.item .note { display: block; font-size: .84rem; color: var(--ink-soft); font-style: italic; margin-top: .1rem; }
 
 /* ---------- Footer ---------- */
 footer {
